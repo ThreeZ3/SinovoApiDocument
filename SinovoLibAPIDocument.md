@@ -1,176 +1,176 @@
 <!-- vscode-markdown-toc -->
 * 1. [Android Platform](#AndroidPlatform)
-  * 1.1. [Installing](#Installing)
-    * 1.1.1. [Add the following in your ``main/AndroidManifest.xml``](#AddthefollowinginyourmainAndroidManifest.xml)
-  * 1.2. [SinovoBle](#SinovoBle)
-    * 1.2.1. [Initialize Ble](#InitializeBle)
-    * 1.2.2. [Get bluethooth status](#Getbluethoothstatus)
-    * 1.2.3. [Enable bluethooth](#Enablebluethooth)
-    * 1.2.4. [Disable bluethooth](#Disablebluethooth)
-    * 1.2.5. [Ble scan by 10 second，but not connect](#Blescanby10secondbutnotconnect)
-    * 1.2.6. [Ble connect to lock via qrcode](#Bleconnecttolockviaqrcode)
-    * 1.2.7. [Lock opening and closing operation](#Lockopeningandclosingoperation)
-    * 1.2.8. [Automatic connection lock in non-binding mode](#Automaticconnectionlockinnon-bindingmode)
-    * 1.2.9. [Update lock user name](#Updatelockusername)
-    * 1.2.10. [Reset code](#Resetcode)
-    * 1.2.11. [Get information of the lock](#Getinformationofthelock)
-    * 1.2.12. [Set properties of the lock](#Setpropertiesofthelock)
-    * 1.2.13. [Create a user, the default is a normal user](#Createauserthedefaultisanormaluser)
-    * 1.2.14. [Add a set of data for the user, password, card, fingerprint](#Addasetofdatafortheuserpasswordcardfingerprint)
-    * 1.2.15. [Delete a certain item of data, delete a set of password, card, fingerprint, binding](#Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding)
-    * 1.2.16. [Clear data](#Cleardata)
-    * 1.2.17. [Under the add lock operation, unbind the lock](#Undertheaddlockoperationunbindthelock)
-    * 1.2.18. [Verify password](#Verifypassword)
-    * 1.2.19. [Modify the attributes of the password, change the normal password and the super user password](#Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword)
-    * 1.2.20. [Synchronization lock user data, including user information](#Synchronizationlockuserdataincludinguserinformation)
-    * 1.2.21. [Sync log](#Synclog)
-    * 1.2.22. [Enable/disable dynamic password](#Enabledisabledynamicpassword)
-    * 1.2.23. [Generate interval dynamic code ,Calculate periodic code](#GenerateintervaldynamiccodeCalculateperiodiccode)
-    * 1.2.24. [Calculate one-time code or Timed code](#Calculateone-timecodeorTimedcode)
-    * 1.2.25. [Stop Scan BLE](#StopScanBLE)
-    * 1.2.26. [Disconnect the BLE connection and clear the cache](#DisconnecttheBLEconnectionandclearthecache)
-    * 1.2.27. [Get the file path of the DFU upgrade package](#GetthefilepathoftheDFUupgradepackage)
-    * 1.2.28. [DFU upgrade, lock firmware upgrade](#DFUupgradelockfirmwareupgrade)
-    * 1.2.29. [Cancel DFU upgrade](#CancelDFUupgrade)
-  * 1.3. [GWSmartConfig](#GWSmartConfig)
-    * 1.3.1. [Gateway configuration](#Gatewayconfiguration)
-    * 1.3.2. [Cancel Gateway configuration](#CancelGatewayconfiguration)
-  * 1.4. [MqttLib](#MqttLib)
-    * 1.4.1. [Initialize](#Initialize)
-    * 1.4.2. [Logout mqtt](#Logoutmqtt)
-    * 1.4.3. [Create a user, the default is a normal user](#Createauserthedefaultisanormaluser-1)
-    * 1.4.4. [Reset code](#Resetcode-1)
-    * 1.4.5. [Update lock user name](#Updatelockusername-1)
-    * 1.4.6. [Modify the attributes of the password, change the normal password and the super user password](#Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword-1)
-    * 1.4.7. [Add a set of data for the user, password, card, fingerprint](#Addasetofdatafortheuserpasswordcardfingerprint-1)
-    * 1.4.8. [Delete a certain item of data, delete a set of password, card, fingerprint, binding](#Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding-1)
-    * 1.4.9. [Verify password](#Verifypassword-1)
-    * 1.4.10. [Set properties of the lock](#Setpropertiesofthelock-1)
-    * 1.4.11. [Get information of the lock](#Getinformationofthelock-1)
-    * 1.4.12. [Lock opening and closing operation](#Lockopeningandclosingoperation-1)
-    * 1.4.13. [Clear data](#Cleardata-1)
-    * 1.4.14. [Enable/disable dynamic password](#Enabledisabledynamicpassword-1)
-    * 1.4.15. [Synchronization lock user data, including user information](#Synchronizationlockuserdataincludinguserinformation-1)
-    * 1.4.16. [Sync log](#Synclog-1)
-    * 1.4.17. [Push data to MQTT server](#PushdatatoMQTTserver)
-    * 1.4.18. [Notification lock disconnects Bluetooth connection](#NotificationlockdisconnectsBluetoothconnection)
-    * 1.4.19. [Stop mqtt from sending commands](#Stopmqttfromsendingcommands)
-  * 1.5. [HttpLib](#HttpLib)
-    * 1.5.1. [Initialize](#Initialize-1)
-    * 1.5.2. [Register new user](#Registernewuser)
-    * 1.5.3. [login](#login)
-    * 1.5.4. [Get the verification code before changing the password](#Gettheverificationcodebeforechangingthepassword)
-    * 1.5.5. [change password](#changepassword)
-    * 1.5.6. [add gateway](#addgateway)
-    * 1.5.7. [delete gateway](#deletegateway)
-    * 1.5.8. [change gateway's name](#changegatewaysname)
-    * 1.5.9. [get the gateway's list](#getthegatewayslist)
-    * 1.5.10. [Add lock to http server](#Addlocktohttpserver)
-    * 1.5.11. [update information of the lock](#updateinformationofthelock)
-    * 1.5.12. [Get the list of lock for the user](#Getthelistoflockfortheuser)
-    * 1.5.13. [delete lock from http server](#deletelockfromhttpserver)
-    * 1.5.14. [Update the information of the login user](#Updatetheinformationoftheloginuser)
-    * 1.5.15. [Update avatar for the login user](#Updateavatarfortheloginuser)
-    * 1.5.16. [Share the lock to other users](#Sharethelocktootherusers)
-    * 1.5.17. [Add share data to http server](#Addsharedatatohttpserver)
-    * 1.5.18. [Update shareData on http server](#UpdateshareDataonhttpserver)
-    * 1.5.19. [Get list of sharedData from http server](#GetlistofsharedDatafromhttpserver)
-    * 1.5.20. [Delete shareData from http server](#DeleteshareDatafromhttpserver)
-    * 1.5.21. [Delete the sub-device in the gateway](#Deletethesub-deviceinthegateway)
-    * 1.5.22. [Reset lock](#Resetlock)
-    * 1.5.23. [Get user avatar](#Getuseravatar)
-    * 1.5.24. [Get lock image](#Getlockimage)
-    * 1.5.25. [Get lock type information](#Getlocktypeinformation)
-    * 1.5.26. [Get upgrade package information](#Getupgradepackageinformation)
-    * 1.5.27. [Download the upgrade package of the current model lock](#Downloadtheupgradepackageofthecurrentmodellock)
+	* 1.1. [Installing](#Installing)
+		* 1.1.1. [Add the following in your ``main/AndroidManifest.xml``](#AddthefollowinginyourmainAndroidManifest.xml)
+	* 1.2. [SinovoBle](#SinovoBle)
+		* 1.2.1. [Initialize Ble](#InitializeBle)
+		* 1.2.2. [Get bluethooth status](#Getbluethoothstatus)
+		* 1.2.3. [Enable bluethooth](#Enablebluethooth)
+		* 1.2.4. [Disable bluethooth](#Disablebluethooth)
+		* 1.2.5. [Ble scan by 10 second，but not connect](#Blescanby10secondbutnotconnect)
+		* 1.2.6. [Ble connect to lock via qrcode](#Bleconnecttolockviaqrcode)
+		* 1.2.7. [Lock opening and closing operation](#Lockopeningandclosingoperation)
+		* 1.2.8. [Automatic connection lock in non-binding mode](#Automaticconnectionlockinnon-bindingmode)
+		* 1.2.9. [Update lock user name](#Updatelockusername)
+		* 1.2.10. [Reset code](#Resetcode)
+		* 1.2.11. [Get information of the lock](#Getinformationofthelock)
+		* 1.2.12. [Set properties of the lock](#Setpropertiesofthelock)
+		* 1.2.13. [Create a user, the default is a normal user](#Createauserthedefaultisanormaluser)
+		* 1.2.14. [Add a set of data for the user, password, card, fingerprint](#Addasetofdatafortheuserpasswordcardfingerprint)
+		* 1.2.15. [Delete a certain item of data, delete a set of password, card, fingerprint, binding](#Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding)
+		* 1.2.16. [Clear data](#Cleardata)
+		* 1.2.17. [Under the add lock operation, unbind the lock](#Undertheaddlockoperationunbindthelock)
+		* 1.2.18. [Verify password](#Verifypassword)
+		* 1.2.19. [Modify the attributes of the password, change the normal password and the super user password](#Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword)
+		* 1.2.20. [Synchronization lock user data, including user information](#Synchronizationlockuserdataincludinguserinformation)
+		* 1.2.21. [Sync log](#Synclog)
+		* 1.2.22. [Enable/disable dynamic password](#Enabledisabledynamicpassword)
+		* 1.2.23. [Generate interval dynamic code ,Calculate periodic code](#GenerateintervaldynamiccodeCalculateperiodiccode)
+		* 1.2.24. [Calculate one-time code or Timed code](#Calculateone-timecodeorTimedcode)
+		* 1.2.25. [Stop Scan BLE](#StopScanBLE)
+		* 1.2.26. [Disconnect the BLE connection and clear the cache](#DisconnecttheBLEconnectionandclearthecache)
+		* 1.2.27. [Get the file path of the DFU upgrade package](#GetthefilepathoftheDFUupgradepackage)
+		* 1.2.28. [DFU upgrade, lock firmware upgrade](#DFUupgradelockfirmwareupgrade)
+		* 1.2.29. [Cancel DFU upgrade](#CancelDFUupgrade)
+	* 1.3. [GWSmartConfig](#GWSmartConfig)
+		* 1.3.1. [Gateway configuration](#Gatewayconfiguration)
+		* 1.3.2. [Cancel Gateway configuration](#CancelGatewayconfiguration)
+	* 1.4. [MqttLib](#MqttLib)
+		* 1.4.1. [Initialize](#Initialize)
+		* 1.4.2. [Logout mqtt](#Logoutmqtt)
+		* 1.4.3. [Create a user, the default is a normal user](#Createauserthedefaultisanormaluser-1)
+		* 1.4.4. [Reset code](#Resetcode-1)
+		* 1.4.5. [Update lock user name](#Updatelockusername-1)
+		* 1.4.6. [Modify the attributes of the password, change the normal password and the super user password](#Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword-1)
+		* 1.4.7. [Add a set of data for the user, password, card, fingerprint](#Addasetofdatafortheuserpasswordcardfingerprint-1)
+		* 1.4.8. [Delete a certain item of data, delete a set of password, card, fingerprint, binding](#Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding-1)
+		* 1.4.9. [Verify password](#Verifypassword-1)
+		* 1.4.10. [Set properties of the lock](#Setpropertiesofthelock-1)
+		* 1.4.11. [Get information of the lock](#Getinformationofthelock-1)
+		* 1.4.12. [Lock opening and closing operation](#Lockopeningandclosingoperation-1)
+		* 1.4.13. [Clear data](#Cleardata-1)
+		* 1.4.14. [Enable/disable dynamic password](#Enabledisabledynamicpassword-1)
+		* 1.4.15. [Synchronization lock user data, including user information](#Synchronizationlockuserdataincludinguserinformation-1)
+		* 1.4.16. [Sync log](#Synclog-1)
+		* 1.4.17. [Push data to MQTT server](#PushdatatoMQTTserver)
+		* 1.4.18. [Notification lock disconnects Bluetooth connection](#NotificationlockdisconnectsBluetoothconnection)
+		* 1.4.19. [Stop mqtt from sending commands](#Stopmqttfromsendingcommands)
+	* 1.5. [HttpLib](#HttpLib)
+		* 1.5.1. [Initialize](#Initialize-1)
+		* 1.5.2. [Register new user](#Registernewuser)
+		* 1.5.3. [login](#login)
+		* 1.5.4. [Get the verification code before changing the password](#Gettheverificationcodebeforechangingthepassword)
+		* 1.5.5. [change password](#changepassword)
+		* 1.5.6. [add gateway](#addgateway)
+		* 1.5.7. [delete gateway](#deletegateway)
+		* 1.5.8. [change gateway's name](#changegatewaysname)
+		* 1.5.9. [get the gateway's list](#getthegatewayslist)
+		* 1.5.10. [Add lock to http server](#Addlocktohttpserver)
+		* 1.5.11. [update information of the lock](#updateinformationofthelock)
+		* 1.5.12. [Get the list of lock for the user](#Getthelistoflockfortheuser)
+		* 1.5.13. [delete lock from http server](#deletelockfromhttpserver)
+		* 1.5.14. [Update the information of the login user](#Updatetheinformationoftheloginuser)
+		* 1.5.15. [Update avatar for the login user](#Updateavatarfortheloginuser)
+		* 1.5.16. [Share the lock to other users](#Sharethelocktootherusers)
+		* 1.5.17. [Add share data to http server](#Addsharedatatohttpserver)
+		* 1.5.18. [Update shareData on http server](#UpdateshareDataonhttpserver)
+		* 1.5.19. [Get list of sharedData from http server](#GetlistofsharedDatafromhttpserver)
+		* 1.5.20. [Delete shareData from http server](#DeleteshareDatafromhttpserver)
+		* 1.5.21. [Delete the sub-device in the gateway](#Deletethesub-deviceinthegateway)
+		* 1.5.22. [Reset lock](#Resetlock)
+		* 1.5.23. [Get user avatar](#Getuseravatar)
+		* 1.5.24. [Get lock image](#Getlockimage)
+		* 1.5.25. [Get lock type information](#Getlocktypeinformation)
+		* 1.5.26. [Get upgrade package information](#Getupgradepackageinformation)
+		* 1.5.27. [Download the upgrade package of the current model lock](#Downloadtheupgradepackageofthecurrentmodellock)
 * 2. [Issues](#Issues)
 * 3. [Author](#Author)
 * 4. [IOS Platform](#IOSPlatform)
-  * 4.1. [Installing](#Installing-1)
-    * 4.1.1. [Add the following in your ``info.plist``](#Addthefollowinginyourinfo.plist)
-  * 4.2. [SinovoBle](#SinovoBle-1)
-    * 4.2.1. [Initialize Ble](#InitializeBle-1)
-    * 4.2.2. [Initialize SinovoBle data callback](#InitializeSinovoBledatacallback)
-    * 4.2.3. [Ble scan by 10 second，but not connect](#Blescanby10secondbutnotconnect-1)
-    * 4.2.4. [Ble connect to lock via qrcode](#Bleconnecttolockviaqrcode-1)
-    * 4.2.5. [Lock opening and closing operation](#Lockopeningandclosingoperation-1)
-    * 4.2.6. [Automatic connection lock in non-binding mode](#Automaticconnectionlockinnon-bindingmode-1)
-    * 4.2.7. [Update lock user name](#Updatelockusername-1)
-    * 4.2.8. [Reset code](#Resetcode-1)
-    * 4.2.9. [Get information of the lock](#Getinformationofthelock-1)
-    * 4.2.10. [Set properties of the lock](#Setpropertiesofthelock-1)
-    * 4.2.11. [Create a user, the default is a normal user](#Createauserthedefaultisanormaluser-1)
-    * 4.2.12. [Add a set of data for the user, password, card, fingerprint](#Addasetofdatafortheuserpasswordcardfingerprint-1)
-    * 4.2.13. [Delete a certain item of data, delete a set of password, card, fingerprint, binding](#Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding-1)
-    * 4.2.14. [Clear data](#Cleardata-1)
-    * 4.2.15. [Under the add lock operation, unbind the lock](#Undertheaddlockoperationunbindthelock-1)
-    * 4.2.16. [Verify password](#Verifypassword-1)
-    * 4.2.17. [Modify the attributes of the password, change the normal password and the super user password](#Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword-1)
-    * 4.2.18. [Synchronization lock user data, including user information](#Synchronizationlockuserdataincludinguserinformation-1)
-    * 4.2.19. [Sync log](#Synclog-1)
-    * 4.2.20. [Enable/disable dynamic password](#Enabledisabledynamicpassword-1)
-    * 4.2.21. [Generate interval dynamic code ,Calculate periodic code](#GenerateintervaldynamiccodeCalculateperiodiccode-1)
-    * 4.2.22. [Calculate one-time code or Timed code](#Calculateone-timecodeorTimedcode-1)
-    * 4.2.23. [Stop Scan BLE](#StopScanBLE-1)
-    * 4.2.24. [Disconnect the BLE connection and clear the cache](#DisconnecttheBLEconnectionandclearthecache-1)
-  * 4.3. [GWSmartConfig](#GWSmartConfig-1)
-    * 4.3.1. [Gateway configuration](#Gatewayconfiguration-1)
-    * 4.3.2. [Cancel Gateway configuration](#CancelGatewayconfiguration-1)
-    * 4.3.3. [It can also be configured via Bluetooth](#ItcanalsobeconfiguredviaBluetooth)
-    * 4.3.4. [Cancel Gateway configuration](#CancelGatewayconfiguration-1)
-    * 4.3.5. [SinovoBle others callback](#SinovoBleotherscallback)
-  * 4.4. [MqttInstance](#MqttInstance)
-    * 4.4.1. [Initialize](#Initialize-1)
-    * 4.4.2. [Initialize MqttCallBack](#InitializeMqttCallBack)
-    * 4.4.3. [Unsubscribe topic](#Unsubscribetopic)
-    * 4.4.4. [Logout mqtt](#Logoutmqtt-1)
-    * 4.4.5. [Create a user, the default is a normal user](#Createauserthedefaultisanormaluser-1)
-    * 4.4.6. [Reset code](#Resetcode-1)
-    * 4.4.7. [Update lock user name](#Updatelockusername-1)
-    * 4.4.8. [Modify the attributes of the password, change the normal password and the super user password](#Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword-1)
-    * 4.4.9. [Add a set of data for the user, password, card, fingerprint](#Addasetofdatafortheuserpasswordcardfingerprint-1)
-    * 4.4.10. [Delete a certain item of data, delete a set of password, card, fingerprint, binding](#Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding-1)
-    * 4.4.11. [Verify password](#Verifypassword-1)
-    * 4.4.12. [Set properties of the lock](#Setpropertiesofthelock-1)
-    * 4.4.13. [Get information of the lock](#Getinformationofthelock-1)
-    * 4.4.14. [Lock opening and closing operation](#Lockopeningandclosingoperation-1)
-    * 4.4.15. [Clear data](#Cleardata-1)
-    * 4.4.16. [Enable/disable dynamic password](#Enabledisabledynamicpassword-1)
-    * 4.4.17. [Synchronization lock user data, including user information](#Synchronizationlockuserdataincludinguserinformation-1)
-    * 4.4.18. [Sync log](#Synclog-1)
-    * 4.4.19. [Push data to MQTT server or other user](#PushdatatoMQTTserverorotheruser)
-    * 4.4.20. [Disconnect the Bluetooth connection between the gateway and the lock](#DisconnecttheBluetoothconnectionbetweenthegatewayandthelock)
-    * 4.4.21. [Stop mqtt from sending commands](#Stopmqttfromsendingcommands-1)
-    * 4.4.22. [MqttInstance callback](#MqttInstancecallback)
-  * 4.5. [HttpLib](#HttpLib-1)
-    * 4.5.1. [Register new user](#Registernewuser-1)
-    * 4.5.2. [login](#login-1)
-    * 4.5.3. [Get the verification code before changing the password](#Gettheverificationcodebeforechangingthepassword-1)
-    * 4.5.4. [change password](#changepassword-1)
-    * 4.5.5. [add gateway](#addgateway-1)
-    * 4.5.6. [delete gateway](#deletegateway-1)
-    * 4.5.7. [change gateway's name](#changegatewaysname-1)
-    * 4.5.8. [get the gateway's list](#getthegatewayslist-1)
-    * 4.5.9. [Add lock to http server](#Addlocktohttpserver-1)
-    * 4.5.10. [update information of the lock](#updateinformationofthelock-1)
-    * 4.5.11. [Get the list of lock for the user](#Getthelistoflockfortheuser-1)
-    * 4.5.12. [delete lock from http server](#deletelockfromhttpserver-1)
-    * 4.5.13. [Update the information of the login user](#Updatetheinformationoftheloginuser-1)
-    * 4.5.14. [Update avatar for the login user](#Updateavatarfortheloginuser-1)
-    * 4.5.15. [Share the lock to other users](#Sharethelocktootherusers-1)
-    * 4.5.16. [Add share data to http server](#Addsharedatatohttpserver-1)
-    * 4.5.17. [Update shareData on http server](#UpdateshareDataonhttpserver-1)
-    * 4.5.18. [Get list of sharedData from http server](#GetlistofsharedDatafromhttpserver-1)
-    * 4.5.19. [Delete shareData from http server](#DeleteshareDatafromhttpserver-1)
-    * 4.5.20. [Delete the sub-device in the gateway](#Deletethesub-deviceinthegateway-1)
-    * 4.5.21. [Reset lock](#Resetlock-1)
-    * 4.5.22. [Get user avatar](#Getuseravatar-1)
-    * 4.5.23. [Get lock image](#Getlockimage-1)
-    * 4.5.24. [Get lock type information](#Getlocktypeinformation-1)
-    * 4.5.25. [Get upgrade package information](#Getupgradepackageinformation-1)
-    * 4.5.26. [Download the upgrade package of the current model lock](#Downloadtheupgradepackageofthecurrentmodellock-1)
-  * 4.6. [DFU upgrade, lock firmware upgrade](#DFUupgradelockfirmwareupgrade-1)
-    * 4.6.1. [Cancel DFU upgrade](#CancelDFUupgrade-1)
+	* 4.1. [Installing](#Installing-1)
+		* 4.1.1. [Add the following in your ``info.plist``](#Addthefollowinginyourinfo.plist)
+	* 4.2. [SinovoBle](#SinovoBle-1)
+		* 4.2.1. [Initialize Ble](#InitializeBle-1)
+		* 4.2.2. [Initialize SinovoBle data callback](#InitializeSinovoBledatacallback)
+		* 4.2.3. [Ble scan by 10 second，but not connect](#Blescanby10secondbutnotconnect-1)
+		* 4.2.4. [Ble connect to lock via qrcode](#Bleconnecttolockviaqrcode-1)
+		* 4.2.5. [Lock opening and closing operation](#Lockopeningandclosingoperation-1)
+		* 4.2.6. [Automatic connection lock in non-binding mode](#Automaticconnectionlockinnon-bindingmode-1)
+		* 4.2.7. [Update lock user name](#Updatelockusername-1)
+		* 4.2.8. [Reset code](#Resetcode-1)
+		* 4.2.9. [Get information of the lock](#Getinformationofthelock-1)
+		* 4.2.10. [Set properties of the lock](#Setpropertiesofthelock-1)
+		* 4.2.11. [Create a user, the default is a normal user](#Createauserthedefaultisanormaluser-1)
+		* 4.2.12. [Add a set of data for the user, password, card, fingerprint](#Addasetofdatafortheuserpasswordcardfingerprint-1)
+		* 4.2.13. [Delete a certain item of data, delete a set of password, card, fingerprint, binding](#Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding-1)
+		* 4.2.14. [Clear data](#Cleardata-1)
+		* 4.2.15. [Under the add lock operation, unbind the lock](#Undertheaddlockoperationunbindthelock-1)
+		* 4.2.16. [Verify password](#Verifypassword-1)
+		* 4.2.17. [Modify the attributes of the password, change the normal password and the super user password](#Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword-1)
+		* 4.2.18. [Synchronization lock user data, including user information](#Synchronizationlockuserdataincludinguserinformation-1)
+		* 4.2.19. [Sync log](#Synclog-1)
+		* 4.2.20. [Enable/disable dynamic password](#Enabledisabledynamicpassword-1)
+		* 4.2.21. [Generate interval dynamic code ,Calculate periodic code](#GenerateintervaldynamiccodeCalculateperiodiccode-1)
+		* 4.2.22. [Calculate one-time code or Timed code](#Calculateone-timecodeorTimedcode-1)
+		* 4.2.23. [Stop Scan BLE](#StopScanBLE-1)
+		* 4.2.24. [Disconnect the BLE connection and clear the cache](#DisconnecttheBLEconnectionandclearthecache-1)
+	* 4.3. [GWSmartConfig](#GWSmartConfig-1)
+		* 4.3.1. [Gateway configuration](#Gatewayconfiguration-1)
+		* 4.3.2. [Cancel Gateway configuration](#CancelGatewayconfiguration-1)
+		* 4.3.3. [It can also be configured via Bluetooth](#ItcanalsobeconfiguredviaBluetooth)
+		* 4.3.4. [Cancel Gateway configuration](#CancelGatewayconfiguration-1)
+		* 4.3.5. [SinovoBle others callback](#SinovoBleotherscallback)
+	* 4.4. [MqttInstance](#MqttInstance)
+		* 4.4.1. [Initialize](#Initialize-1)
+		* 4.4.2. [Initialize MqttCallBack](#InitializeMqttCallBack)
+		* 4.4.3. [Unsubscribe topic](#Unsubscribetopic)
+		* 4.4.4. [Logout mqtt](#Logoutmqtt-1)
+		* 4.4.5. [Create a user, the default is a normal user](#Createauserthedefaultisanormaluser-1)
+		* 4.4.6. [Reset code](#Resetcode-1)
+		* 4.4.7. [Update lock user name](#Updatelockusername-1)
+		* 4.4.8. [Modify the attributes of the password, change the normal password and the super user password](#Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword-1)
+		* 4.4.9. [Add a set of data for the user, password, card, fingerprint](#Addasetofdatafortheuserpasswordcardfingerprint-1)
+		* 4.4.10. [Delete a certain item of data, delete a set of password, card, fingerprint, binding](#Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding-1)
+		* 4.4.11. [Verify password](#Verifypassword-1)
+		* 4.4.12. [Set properties of the lock](#Setpropertiesofthelock-1)
+		* 4.4.13. [Get information of the lock](#Getinformationofthelock-1)
+		* 4.4.14. [Lock opening and closing operation](#Lockopeningandclosingoperation-1)
+		* 4.4.15. [Clear data](#Cleardata-1)
+		* 4.4.16. [Enable/disable dynamic password](#Enabledisabledynamicpassword-1)
+		* 4.4.17. [Synchronization lock user data, including user information](#Synchronizationlockuserdataincludinguserinformation-1)
+		* 4.4.18. [Sync log](#Synclog-1)
+		* 4.4.19. [Push data to MQTT server or other user](#PushdatatoMQTTserverorotheruser)
+		* 4.4.20. [Disconnect the Bluetooth connection between the gateway and the lock](#DisconnecttheBluetoothconnectionbetweenthegatewayandthelock)
+		* 4.4.21. [Stop mqtt from sending commands](#Stopmqttfromsendingcommands-1)
+		* 4.4.22. [MqttInstance callback](#MqttInstancecallback)
+	* 4.5. [HttpLib](#HttpLib-1)
+		* 4.5.1. [Register new user](#Registernewuser-1)
+		* 4.5.2. [login](#login-1)
+		* 4.5.3. [Get the verification code before changing the password](#Gettheverificationcodebeforechangingthepassword-1)
+		* 4.5.4. [change password](#changepassword-1)
+		* 4.5.5. [add gateway](#addgateway-1)
+		* 4.5.6. [delete gateway](#deletegateway-1)
+		* 4.5.7. [change gateway's name](#changegatewaysname-1)
+		* 4.5.8. [get the gateway's list](#getthegatewayslist-1)
+		* 4.5.9. [Add lock to http server](#Addlocktohttpserver-1)
+		* 4.5.10. [update information of the lock](#updateinformationofthelock-1)
+		* 4.5.11. [Get the list of lock for the user](#Getthelistoflockfortheuser-1)
+		* 4.5.12. [delete lock from http server](#deletelockfromhttpserver-1)
+		* 4.5.13. [Update the information of the login user](#Updatetheinformationoftheloginuser-1)
+		* 4.5.14. [Update avatar for the login user](#Updateavatarfortheloginuser-1)
+		* 4.5.15. [Share the lock to other users](#Sharethelocktootherusers-1)
+		* 4.5.16. [Add share data to http server](#Addsharedatatohttpserver-1)
+		* 4.5.17. [Update shareData on http server](#UpdateshareDataonhttpserver-1)
+		* 4.5.18. [Get list of sharedData from http server](#GetlistofsharedDatafromhttpserver-1)
+		* 4.5.19. [Delete shareData from http server](#DeleteshareDatafromhttpserver-1)
+		* 4.5.20. [Delete the sub-device in the gateway](#Deletethesub-deviceinthegateway-1)
+		* 4.5.21. [Reset lock](#Resetlock-1)
+		* 4.5.22. [Get user avatar](#Getuseravatar-1)
+		* 4.5.23. [Get lock image](#Getlockimage-1)
+		* 4.5.24. [Get lock type information](#Getlocktypeinformation-1)
+		* 4.5.25. [Get upgrade package information](#Getupgradepackageinformation-1)
+		* 4.5.26. [Download the upgrade package of the current model lock](#Downloadtheupgradepackageofthecurrentmodellock-1)
+	* 4.6. [DFU upgrade, lock firmware upgrade](#DFUupgradelockfirmwareupgrade-1)
+		* 4.6.1. [Cancel DFU upgrade](#CancelDFUupgrade-1)
 * 5. [Issues](#Issues-1)
 * 6. [Author](#Author-1)
 
@@ -181,9 +181,9 @@
 <!-- /vscode-markdown-toc -->
 # SinovoLib API Document
 
-## 1. <a name='AndroidPlatform'></a>Android Platform
+##  1. <a name='AndroidPlatform'></a>Android Platform
 
-### 1.1. <a name='Installing'></a>Installing
+###  1.1. <a name='Installing'></a>Installing
 
 Add sinovoLib to your ``build.grade(:app)`` file:
 
@@ -195,7 +195,7 @@ Add sinovoLib to your ``build.grade(:app)`` file:
 
 Sync Project with Gradle
 
-#### 1.1.1. <a name='AddthefollowinginyourmainAndroidManifest.xml'></a>Add the following in your ``main/AndroidManifest.xml``
+####  1.1.1. <a name='AddthefollowinginyourmainAndroidManifest.xml'></a>Add the following in your ``main/AndroidManifest.xml``
 
 These permissions are required for sinovoLib to work
 
@@ -221,9 +221,9 @@ These permissions are required for sinovoLib to work
 </manifest>
 ```
 
-### 1.2. <a name='SinovoBle'></a>SinovoBle
+###  1.2. <a name='SinovoBle'></a>SinovoBle
 
-#### 1.2.1. <a name='InitializeBle'></a>Initialize Ble
+####  1.2.1. <a name='InitializeBle'></a>Initialize Ble
 
 * Params:
   * context – context
@@ -234,31 +234,31 @@ These permissions are required for sinovoLib to work
 SinovoBle.getInstance().init(Context context, IScanCallBack iScanCallBack, IConnectCallback iConnectCallback)
 ```
 
-#### 1.2.2. <a name='Getbluethoothstatus'></a>Get bluethooth status
+####  1.2.2. <a name='Getbluethoothstatus'></a>Get bluethooth status
 
 ```
 SinovoBle.getInstance().getBluetoothAdapter().isEnabled()
 ```
 
-#### 1.2.3. <a name='Enablebluethooth'></a>Enable bluethooth
+####  1.2.3. <a name='Enablebluethooth'></a>Enable bluethooth
 
 ```
 SinovoBle.getInstance().getBluetoothAdapter().enable()
 ```
 
-#### 1.2.4. <a name='Disablebluethooth'></a>Disable bluethooth
+####  1.2.4. <a name='Disablebluethooth'></a>Disable bluethooth
 
 ```
 SinovoBle.getInstance().getBluetoothAdapter().disable()
 ```
 
-#### 1.2.5. <a name='Blescanby10secondbutnotconnect'></a>Ble scan by 10 second，but not connect
+####  1.2.5. <a name='Blescanby10secondbutnotconnect'></a>Ble scan by 10 second，but not connect
 
 ```
 SinovoBle.getInstance().bleScanOnly()
 ```
 
-#### 1.2.6. <a name='Bleconnecttolockviaqrcode'></a>Ble connect to lock via qrcode
+####  1.2.6. <a name='Bleconnecttolockviaqrcode'></a>Ble connect to lock via qrcode
 
 * Params:
   * qrcode – qrcode of the lock
@@ -273,7 +273,7 @@ Example Return:
 {"funCode":"01","errCode":"00","lockMac":"FE655103CE44","lockSno":"d7a76e","lockQRCode":"222111090001","autoCreateUser":"01","userNid":"02","codeType":"02","sid":"02","code":"036465"}
 ``
 
-#### 1.2.7. <a name='Lockopeningandclosingoperation'></a>Lock opening and closing operation
+####  1.2.7. <a name='Lockopeningandclosingoperation'></a>Lock opening and closing operation
 
 * Params:
   * unlockType – 00 Lock、01 Unlock
@@ -287,7 +287,7 @@ Example Return:
 {"funCode":"0a","errCode":"00","lockMac":"FE655103CE44","opType":"01"}
 ``
 
-#### 1.2.8. <a name='Automaticconnectionlockinnon-bindingmode'></a>Automatic connection lock in non-binding mode
+####  1.2.8. <a name='Automaticconnectionlockinnon-bindingmode'></a>Automatic connection lock in non-binding mode
 
 * Params:
   * autoConnectList – Automatically connected lock list
@@ -296,7 +296,7 @@ Example Return:
 SinovoBle.getInstance().connectLockViaMacSno(final ArrayList<BleConnectLock> autoConnectList)
 ```
 
-#### 1.2.9. <a name='Updatelockusername'></a>Update lock user name
+####  1.2.9. <a name='Updatelockusername'></a>Update lock user name
 
 ```
 SinovoBle.getInstance().updateUserName(String userName, String userNID, String lockSNO, String lockMacAddress)
@@ -307,7 +307,7 @@ Example Return:
 {"funCode":"03","errCode":"00","lockMac":"FE655103CE44","userNid":"01","username":"Username"}
 ``
 
-#### 1.2.10. <a name='Resetcode'></a>Reset code
+####  1.2.10. <a name='Resetcode'></a>Reset code
 
 * Parmas:
   * codeType - DataType of this code
@@ -322,7 +322,7 @@ Example Return:
 {"funCode":"0d","errCode":"00","lockMac":"FE655103CE44","userNid":"01","codeType":"01","sid":"01","code":"123456","opendata":"FE0A079F4805D6C6F06DF0296E398C0E41ADC501"}
 ``
 
-#### 1.2.11. <a name='Getinformationofthelock'></a>Get information of the lock
+####  1.2.11. <a name='Getinformationofthelock'></a>Get information of the lock
 
 * Params:
   * dataType – \
@@ -348,7 +348,7 @@ dataType = 12, Example Return:
 {"funCode":"2c","errCode":"00","lockMac":"FE655103CE44","power":9,"lockStatus":"00","autoLockTime":5,"volume":"05","autocreate":"00","superUserLevel":"01","fwVersion1":"01","fwVersion2":"02","fwVerTime":"221107","fwType":"05"}
 ``
 
-#### 1.2.12. <a name='Setpropertiesofthelock'></a>Set properties of the lock
+####  1.2.12. <a name='Setpropertiesofthelock'></a>Set properties of the lock
 
 * Params:
   * data – value
@@ -374,7 +374,7 @@ dataType = 01, Example Return:
 {"funCode":"11","errCode":"00","lockMac":"FE655103CE44","lockName":"SMART LOCK"}
 ``
 
-#### 1.2.13. <a name='Createauserthedefaultisanormaluser'></a>Create a user, the default is a normal user
+####  1.2.13. <a name='Createauserthedefaultisanormaluser'></a>Create a user, the default is a normal user
 
 * Params:
   * userName – string
@@ -388,7 +388,7 @@ Example Return:
 {"funCode":"02","errCode":"00","lockMac":"FE655103CE44","userNid":"02","username":"User"}
 ``
 
-#### 1.2.14. <a name='Addasetofdatafortheuserpasswordcardfingerprint'></a>Add a set of data for the user, password, card, fingerprint
+####  1.2.14. <a name='Addasetofdatafortheuserpasswordcardfingerprint'></a>Add a set of data for the user, password, card, fingerprint
 
 * Params:
   * userNID – UserNid
@@ -409,7 +409,7 @@ Example Return:
 {"funCode":"05","errCode":"00","lockMac":"FE655103CE44","userNid":"02","dataType":"06","sid":"01","data":""}
 ``
 
-#### 1.2.15. <a name='Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding'></a>Delete a certain item of data, delete a set of password, card, fingerprint, binding
+####  1.2.15. <a name='Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding'></a>Delete a certain item of data, delete a set of password, card, fingerprint, binding
 
 * Params:
   * dataType – type of data
@@ -424,7 +424,7 @@ Example Return:
 {"funCode":"06","errCode":"00","lockMac":"FE655103CE44","dataType":"06","sid":"01"}
 ``
 
-#### 1.2.16. <a name='Cleardata'></a>Clear data
+####  1.2.16. <a name='Cleardata'></a>Clear data
 
 * Params:
   * datakType – Type of data to be cleared :\
@@ -440,13 +440,13 @@ datakType = 0c, Example Return:
 {"funCode":"0c","errCode":"00","lockMac":"FE655103CE44","dataType":"0c"}
 ``
 
-#### 1.2.17. <a name='Undertheaddlockoperationunbindthelock'></a>Under the add lock operation, unbind the lock
+####  1.2.17. <a name='Undertheaddlockoperationunbindthelock'></a>Under the add lock operation, unbind the lock
 
 ```
 SinovoBle.getInstance().cancelAddLock()
 ```
 
-#### 1.2.18. <a name='Verifypassword'></a>Verify password
+####  1.2.18. <a name='Verifypassword'></a>Verify password
 
 * Params:
   * password-password
@@ -460,7 +460,7 @@ Example Return:
 {"funCode":"08","errCode":"00","lockMac":"FE:65:51:03:CE:44","codeType":"01","userNid":"01","sid":"01","code":"785073"}
 ``
 
-#### 1.2.19. <a name='Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword'></a>Modify the attributes of the password, change the normal password and the super user password
+####  1.2.19. <a name='Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword'></a>Modify the attributes of the password, change the normal password and the super user password
 
 * Params:
   * oldCodeType - the original type of the password,
@@ -480,7 +480,7 @@ Example Return:
 {"funCode":"07","errCode":"00","lockMac":"FE:65:51:03:CE:44","dataType":"03","sid":"02"}
 ``
 
-#### 1.2.20. <a name='Synchronizationlockuserdataincludinguserinformation'></a>Synchronization lock user data, including user information
+####  1.2.20. <a name='Synchronizationlockuserdataincludinguserinformation'></a>Synchronization lock user data, including user information
 
 ```
 SinovoBle.getInstance().getAllUsers(String lockSNO, String lockMacAddress)
@@ -491,7 +491,7 @@ Example Return:
 {"funCode":"13","errCode":"00","lockMac":"FE:65:51:03:CE:44","dataType":"01","userNid":"01","sid":"01","syncData":"785073"}
 ``
 
-#### 1.2.21. <a name='Synclog'></a>Sync log
+####  1.2.21. <a name='Synclog'></a>Sync log
 
 * Params:
   * logID - the current logID, support the synchronization from the specified id, if the logID is ff, all logs will be synchronized
@@ -505,7 +505,7 @@ Example Return:
 {"funCode":"17","logType":"09","logID":"03","logDate":"23-04-12","logTime":"15:28","userType":"01","logCont":"01"}
 ``
 
-#### 1.2.22. <a name='Enabledisabledynamicpassword'></a>Enable/disable dynamic password
+####  1.2.22. <a name='Enabledisabledynamicpassword'></a>Enable/disable dynamic password
 
 * Params:
   * dynamicCode - corresponding dynamic code
@@ -520,7 +520,7 @@ Example Return:
 {"funCode":"20","errCode":"00","lockMac":"FE:65:51:03:CE:44","codeStatus":"01","sharedCode":"22877542856"}
 ``
 
-#### 1.2.23. <a name='GenerateintervaldynamiccodeCalculateperiodiccode'></a>Generate interval dynamic code ,Calculate periodic code
+####  1.2.23. <a name='GenerateintervaldynamiccodeCalculateperiodiccode'></a>Generate interval dynamic code ,Calculate periodic code
 
 * Params:
   * lockmac – lock mac address, such as 00A051F4D44A
@@ -533,7 +533,7 @@ Example Return:
 SinovoBle.getInstance().calcDyCode(String lockmac, String starttime, String endtime)
 ```
 
-#### 1.2.24. <a name='Calculateone-timecodeorTimedcode'></a>Calculate one-time code or Timed code
+####  1.2.24. <a name='Calculateone-timecodeorTimedcode'></a>Calculate one-time code or Timed code
 
 * Params:
   * lockmac – lock mac address, such as 00A051F4D44A
@@ -548,25 +548,25 @@ SinovoBle.getInstance().calcDyCode(String lockmac, String starttime, String endt
 SinovoBle.getInstance().calcDyCode(String lockmac, String basetime,  String starttime, String valid, int type)
 ```
 
-#### 1.2.25. <a name='StopScanBLE'></a>Stop Scan BLE
+####  1.2.25. <a name='StopScanBLE'></a>Stop Scan BLE
 
 ```
 SinovoBle.getInstance().stopScanBLE()
 ```
 
-#### 1.2.26. <a name='DisconnecttheBLEconnectionandclearthecache'></a>Disconnect the BLE connection and clear the cache
+####  1.2.26. <a name='DisconnecttheBLEconnectionandclearthecache'></a>Disconnect the BLE connection and clear the cache
 
 ```
 SinovoBle.getInstance().disconnBle()
 ```
 
-#### 1.2.27. <a name='GetthefilepathoftheDFUupgradepackage'></a>Get the file path of the DFU upgrade package
+####  1.2.27. <a name='GetthefilepathoftheDFUupgradepackage'></a>Get the file path of the DFU upgrade package
 
 ```
 SinovoBle.getInstance().getAppFilePath()
 ```
 
-#### 1.2.28. <a name='DFUupgradelockfirmwareupgrade'></a>DFU upgrade, lock firmware upgrade
+####  1.2.28. <a name='DFUupgradelockfirmwareupgrade'></a>DFU upgrade, lock firmware upgrade
 
 * Params:
   * dfuPath - the file path of the DFU upgrade package
@@ -575,15 +575,15 @@ SinovoBle.getInstance().getAppFilePath()
 SinovoBle.getInstance().upgradeFW(Context context, String mac  ,String dfuPath)
 ```
 
-#### 1.2.29. <a name='CancelDFUupgrade'></a>Cancel DFU upgrade
+####  1.2.29. <a name='CancelDFUupgrade'></a>Cancel DFU upgrade
 
 ```
 SinovoBle.getInstance().cancelUpgrade(Context context);
 ```
 
-### 1.3. <a name='GWSmartConfig'></a>GWSmartConfig
+###  1.3. <a name='GWSmartConfig'></a>GWSmartConfig
 
-#### 1.3.1. <a name='Gatewayconfiguration'></a>Gateway configuration
+####  1.3.1. <a name='Gatewayconfiguration'></a>Gateway configuration
 
 * Params:
   * context - context
@@ -601,7 +601,7 @@ SinovoBle.getInstance().cancelUpgrade(Context context);
    SinovoBle.getInstance().configureGW(GWSmartConfigCallback GWSmartConfigCallback, String wifiSSID, String wifiPass)
    ```
 
-#### 1.3.2. <a name='CancelGatewayconfiguration'></a>Cancel Gateway configuration  
+####  1.3.2. <a name='CancelGatewayconfiguration'></a>Cancel Gateway configuration  
 
 ```
 GWSmartConfig.getInstance().exitConfig()
@@ -611,9 +611,9 @@ GWSmartConfig.getInstance().exitConfig()
 SinovoBle.getInstance().finishConfigureGW()
 ```
 
-### 1.4. <a name='MqttLib'></a>MqttLib
+###  1.4. <a name='MqttLib'></a>MqttLib
 
-#### 1.4.1. <a name='Initialize'></a>Initialize
+####  1.4.1. <a name='Initialize'></a>Initialize
 
 * Params:
   * context – context
@@ -627,13 +627,13 @@ SinovoBle.getInstance().finishConfigureGW()
 MqttLib.getInstance().init(Context context, String proKey, String deName, String deSecret, String region, iotMqttCallback callback)
 ```
 
-#### 1.4.2. <a name='Logoutmqtt'></a>Logout mqtt
+####  1.4.2. <a name='Logoutmqtt'></a>Logout mqtt
 
 ```
 MqttLib.getInstance().logoutMQTT()
 ```
 
-#### 1.4.3. <a name='Createauserthedefaultisanormaluser-1'></a>Create a user, the default is a normal user
+####  1.4.3. <a name='Createauserthedefaultisanormaluser-1'></a>Create a user, the default is a normal user
 
 * Params:
   * gatewayid - gateway id
@@ -652,7 +652,7 @@ Example Return:
  {msg: {"funCode":"02","errCode":"00","lockMac":"FE:65:51:03:CE:44","userNid":"03","username":"New User03","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.4. <a name='Resetcode-1'></a>Reset code
+####  1.4.4. <a name='Resetcode-1'></a>Reset code
 
 * Params:
   * gatewayid - gateway id
@@ -674,7 +674,7 @@ Example Return:
 {msg: {"funCode":"0d","errCode":"00","lockMac":"FE:65:51:03:CE:44","userNid":"01","codeType":"01","sid":"01","code":"785078","opendata":"FE0A07F8C3AC23C090C1F49858722F5BC6D5385D","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.5. <a name='Updatelockusername-1'></a>Update lock user name
+####  1.4.5. <a name='Updatelockusername-1'></a>Update lock user name
 
 * Params:
   * gatewayid - gateway id
@@ -694,7 +694,7 @@ Example Return:
 {msg: {"funCode":"03","errCode":"00","lockMac":"FE:65:51:03:CE:44","userNid":"03","username":"YG","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.6. <a name='Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword-1'></a>Modify the attributes of the password, change the normal password and the super user password
+####  1.4.6. <a name='Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword-1'></a>Modify the attributes of the password, change the normal password and the super user password
 
 * Params:
   * gatewayid - gateway id
@@ -715,7 +715,7 @@ Example Return:
 {msg: {"funCode":"07","errCode":"00","lockMac":"FE:65:51:03:CE:44","dataType":"03","sid":"02","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.7. <a name='Addasetofdatafortheuserpasswordcardfingerprint-1'></a>Add a set of data for the user, password, card, fingerprint
+####  1.4.7. <a name='Addasetofdatafortheuserpasswordcardfingerprint-1'></a>Add a set of data for the user, password, card, fingerprint
 
 * Params:
   * gatewayid - gateway id
@@ -741,7 +741,7 @@ Example Return:
 {msg: {"funCode":"05","errCode":"00","lockMac":"FE:65:51:03:CE:44","userNid":"02","dataType":"06","sid":"01","data":"","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.8. <a name='Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding-1'></a>Delete a certain item of data, delete a set of password, card, fingerprint, binding
+####  1.4.8. <a name='Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding-1'></a>Delete a certain item of data, delete a set of password, card, fingerprint, binding
 
 * Params:
   * gatewayid - gateway id
@@ -761,7 +761,7 @@ Example Return:
 {msg: {"funCode":"06","errCode":"00","lockMac":"FE:65:51:03:CE:44","dataType":"06","sid":"01","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.9. <a name='Verifypassword-1'></a>Verify password
+####  1.4.9. <a name='Verifypassword-1'></a>Verify password
 
 * Params:
   * gatewayid - gateway id
@@ -780,7 +780,7 @@ Example Return:
 {msg: {"funCode":"08","errCode":"00","lockMac":"FE:65:51:03:CE:44","codeType":"01","userNid":"01","sid":"01","code":"785078","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.10. <a name='Setpropertiesofthelock-1'></a>Set properties of the lock
+####  1.4.10. <a name='Setpropertiesofthelock-1'></a>Set properties of the lock
 
 * Params:
   * gatewayid - gateway id
@@ -811,7 +811,7 @@ Example Return:
 {msg: {"funCode":"09","errCode":"00","lockMac":"FE:65:51:03:CE:44","enable":"01","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.11. <a name='Getinformationofthelock-1'></a>Get information of the lock
+####  1.4.11. <a name='Getinformationofthelock-1'></a>Get information of the lock
 
 * Params:
   * gatewayid - gateway id
@@ -842,7 +842,7 @@ Example Return:
 {msg: {"funCode":"2c","errCode":"00","lockMac":"FE:65:51:03:CE:44","power":20,"lockStatus":"00","autoLockTime":5,"volume":"05","autocreate":"01","superUserLevel":"01","fwVersion1":"01","fwVersion2":"02","fwVerTime":"221107","fwType":"05","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.12. <a name='Lockopeningandclosingoperation-1'></a>Lock opening and closing operation
+####  1.4.12. <a name='Lockopeningandclosingoperation-1'></a>Lock opening and closing operation
 
 * Params:
   * gatewayid - gateway id
@@ -862,7 +862,7 @@ Example Return:
 {msg: {"funCode":"0a","errCode":"00","lockMac":"FE:65:51:03:CE:44","opType":"01","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.13. <a name='Cleardata-1'></a>Clear data
+####  1.4.13. <a name='Cleardata-1'></a>Clear data
 
 * Params:
   * gatewayid - gateway id
@@ -883,7 +883,7 @@ Example Return:
 {msg: {"funCode":"0c","errCode":"00","lockMac":"FE:65:51:03:CE:44","dataType":"00","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.14. <a name='Enabledisabledynamicpassword-1'></a>Enable/disable dynamic password
+####  1.4.14. <a name='Enabledisabledynamicpassword-1'></a>Enable/disable dynamic password
 
 * Params:
   * gatewayid - gateway id
@@ -903,7 +903,7 @@ Example Return:
 {msg: {"funCode":"20","errCode":"00","lockMac":"FE:65:51:03:CE:44","codeStatus":"00","sharedCode":"28767063126","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.15. <a name='Synchronizationlockuserdataincludinguserinformation-1'></a>Synchronization lock user data, including user information
+####  1.4.15. <a name='Synchronizationlockuserdataincludinguserinformation-1'></a>Synchronization lock user data, including user information
 
 ```
 MqttLib.getInstance().getAllUsers(String gatewayid, String type, String uuid, String mac, String sno)
@@ -914,7 +914,7 @@ Example Return:
 {msg: {"funCode":"13","errCode":"00","lockMac":"FE:65:51:03:CE:44","dataType":"01","userNid":"01","sid":"01","syncData":"785078","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.16. <a name='Synclog-1'></a>Sync log
+####  1.4.16. <a name='Synclog-1'></a>Sync log
 
 * Params:
   * gatewayid - gateway id
@@ -933,7 +933,7 @@ Example Return:
 {msg: {"funCode":"17","logType":"0b","logID":"08","logDate":"23-04-12","logTime":"15:45","userType":"06","logCont":"0602","appId":"534158825@qq.com","type":"bledata","uuid":"F6F7","gateway_id":"2462ABD177C8","mac":"FE655103CE44"}, topic: /a3Q9ncgAkZp/534158825@qq.com/user/get}
 ``
 
-#### 1.4.17. <a name='PushdatatoMQTTserver'></a>Push data to MQTT server
+####  1.4.17. <a name='PushdatatoMQTTserver'></a>Push data to MQTT server
 
 * Params:
   * jsonData - your data
@@ -950,7 +950,7 @@ final String jsonData = "{"type": "updateDevice", "device_id": "FE655103CE44", "
 MqttLib.getInstance().pushDataToMqtt(jsonData)
 ```
 
-#### 1.4.18. <a name='NotificationlockdisconnectsBluetoothconnection'></a>Notification lock disconnects Bluetooth connection
+####  1.4.18. <a name='NotificationlockdisconnectsBluetoothconnection'></a>Notification lock disconnects Bluetooth connection
 
 * Params:
   * gatewayid - gateway id
@@ -963,15 +963,15 @@ MqttLib.getInstance().pushDataToMqtt(jsonData)
 MqttLib.getInstance().toDisconnBle(String gatewayid, String type, String uuid, String mac, String sno)
 ```
 
-#### 1.4.19. <a name='Stopmqttfromsendingcommands'></a>Stop mqtt from sending commands
+####  1.4.19. <a name='Stopmqttfromsendingcommands'></a>Stop mqtt from sending commands
 
 ```
 MqttLib.getInstance().stopMqttSendCmd()
 ```
 
-### 1.5. <a name='HttpLib'></a>HttpLib
+###  1.5. <a name='HttpLib'></a>HttpLib
 
-#### 1.5.1. <a name='Initialize-1'></a>Initialize
+####  1.5.1. <a name='Initialize-1'></a>Initialize
 
 * Params:
   * callBack - HttpLib callback
@@ -980,7 +980,7 @@ MqttLib.getInstance().stopMqttSendCmd()
  HttpLib httpLib = HttpLib.getInstance(HttpLibCallback callBack);
 ```
 
-#### 1.5.2. <a name='Registernewuser'></a>Register new user
+####  1.5.2. <a name='Registernewuser'></a>Register new user
 
 * Params:
   * account – User's account
@@ -995,7 +995,7 @@ Example Return:
 {"code":0,"msg":"request ok","auth":"12345667@qq.com","user_id":735}
 ``
 
-#### 1.5.3. <a name='login'></a>login
+####  1.5.3. <a name='login'></a>login
 
 * Params:
   * account – User's account
@@ -1010,7 +1010,7 @@ Example Return:
 {"code":0,"msg":"request ok","access_token":"df6188f4d92c5d606ba59b3bd20884283ff932da","expires_in":3600,"refresh_token":"2b81e604e6b13656133b4a5d9e60bce566037b13","user_id":360,"nickname":"13","age":"89","gender":"","location":"SZ","shake_unlock":"01","vibration":"01","avatar_url":"https:\/\/gws.qiksmart.com\/upload\/avatar\/16795548437733.jpg","app_productKey":"a3Q9ncgAkZp","app_deviceName":"534158825@qq.com","app_deviceSecret":"806a5b1682a5a940af90219838eef2d3","app_region":"us-west-1","app_subscribe_topic":"\/a3Q9ncgAkZp\/534158825@qq.com\/user\/get","app_publish_topic":"\/a3Q9ncgAkZp\/534158825@qq.com\/user\/update","user_imei":"87A6A4D9F1D3"}
 ``
 
-#### 1.5.4. <a name='Gettheverificationcodebeforechangingthepassword'></a>Get the verification code before changing the password
+####  1.5.4. <a name='Gettheverificationcodebeforechangingthepassword'></a>Get the verification code before changing the password
 
 * Params:
   * account – User's account
@@ -1024,7 +1024,7 @@ Example Return:
 {"code":0,"msg":"request ok"}
 ``
 
-#### 1.5.5. <a name='changepassword'></a>change password
+####  1.5.5. <a name='changepassword'></a>change password
 
 * Params:
   * account – User's account
@@ -1040,7 +1040,7 @@ Example Return:
 {code: 0, msg: request ok, auth: 534158825@qq.com}
 ``
 
-#### 1.5.6. <a name='addgateway'></a>add gateway
+####  1.5.6. <a name='addgateway'></a>add gateway
 
 * Params:
   * gatewayID – the gateway's ID
@@ -1055,7 +1055,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.7. <a name='deletegateway'></a>delete gateway
+####  1.5.7. <a name='deletegateway'></a>delete gateway
 
 * Params:
   * gatewayID – the gateway's ID
@@ -1069,7 +1069,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.8. <a name='changegatewaysname'></a>change gateway's name
+####  1.5.8. <a name='changegatewaysname'></a>change gateway's name
 
 * Params:
   * gatewayID – the gateway's ID
@@ -1084,7 +1084,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.9. <a name='getthegatewayslist'></a>get the gateway's list
+####  1.5.9. <a name='getthegatewayslist'></a>get the gateway's list
 
 ```
 HttpLib.getInstance(callBack).getGatewayList()
@@ -1095,7 +1095,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.10. <a name='Addlocktohttpserver'></a>Add lock to http server
+####  1.5.10. <a name='Addlocktohttpserver'></a>Add lock to http server
 
 ```
 for example:
@@ -1129,7 +1129,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.11. <a name='updateinformationofthelock'></a>update information of the lock
+####  1.5.11. <a name='updateinformationofthelock'></a>update information of the lock
 
 ```
 for example:
@@ -1163,7 +1163,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.12. <a name='Getthelistoflockfortheuser'></a>Get the list of lock for the user
+####  1.5.12. <a name='Getthelistoflockfortheuser'></a>Get the list of lock for the user
 
 ```
 HttpLib.getInstance(callBack).getLockList()
@@ -1174,7 +1174,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.13. <a name='deletelockfromhttpserver'></a>delete lock from http server
+####  1.5.13. <a name='deletelockfromhttpserver'></a>delete lock from http server
 
 * Params:
   * lockID - lockMac
@@ -1188,7 +1188,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.14. <a name='Updatetheinformationoftheloginuser'></a>Update the information of the login user
+####  1.5.14. <a name='Updatetheinformationoftheloginuser'></a>Update the information of the login user
 
 * Params:
   * shake_unlock - 01 enable shake unlock , 00 disable shake unlock
@@ -1203,7 +1203,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.15. <a name='Updateavatarfortheloginuser'></a>Update avatar for the login user
+####  1.5.15. <a name='Updateavatarfortheloginuser'></a>Update avatar for the login user
 
 * Params:
   * bitmap – avatar
@@ -1217,7 +1217,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.16. <a name='Sharethelocktootherusers'></a>Share the lock to other users
+####  1.5.16. <a name='Sharethelocktootherusers'></a>Share the lock to other users
 
 ````
 for example:
@@ -1240,7 +1240,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.17. <a name='Addsharedatatohttpserver'></a>Add share data to http server
+####  1.5.17. <a name='Addsharedatatohttpserver'></a>Add share data to http server
 
 ```
 for example:
@@ -1266,7 +1266,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.18. <a name='UpdateshareDataonhttpserver'></a>Update shareData on http server
+####  1.5.18. <a name='UpdateshareDataonhttpserver'></a>Update shareData on http server
 
 ```
 for example:
@@ -1285,7 +1285,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.19. <a name='GetlistofsharedDatafromhttpserver'></a>Get list of sharedData from http server
+####  1.5.19. <a name='GetlistofsharedDatafromhttpserver'></a>Get list of sharedData from http server
 
 ```
 HttpLib.getInstance(callBack).getShareDataList(final JSONObject json)
@@ -1296,7 +1296,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.20. <a name='DeleteshareDatafromhttpserver'></a>Delete shareData from http server
+####  1.5.20. <a name='DeleteshareDatafromhttpserver'></a>Delete shareData from http server
 
 ```
 for example:
@@ -1315,7 +1315,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.21. <a name='Deletethesub-deviceinthegateway'></a>Delete the sub-device in the gateway
+####  1.5.21. <a name='Deletethesub-deviceinthegateway'></a>Delete the sub-device in the gateway
 
 ```
 for example:
@@ -1329,7 +1329,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.22. <a name='Resetlock'></a>Reset lock
+####  1.5.22. <a name='Resetlock'></a>Reset lock
 
 ```
 for example:
@@ -1343,7 +1343,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.23. <a name='Getuseravatar'></a>Get user avatar
+####  1.5.23. <a name='Getuseravatar'></a>Get user avatar
 
 * Params:
   * url – url of the user avatar
@@ -1357,7 +1357,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.24. <a name='Getlockimage'></a>Get lock image
+####  1.5.24. <a name='Getlockimage'></a>Get lock image
 
 * Params:
   * url – url of the lock image
@@ -1372,7 +1372,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.25. <a name='Getlocktypeinformation'></a>Get lock type information
+####  1.5.25. <a name='Getlocktypeinformation'></a>Get lock type information
 
 ```
 HttpLib.getInstance(callBack).getLockType()
@@ -1383,7 +1383,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.26. <a name='Getupgradepackageinformation'></a>Get upgrade package information
+####  1.5.26. <a name='Getupgradepackageinformation'></a>Get upgrade package information
 
 * Params:
   * isRelease - true will get  from release channel , false will get  from debug channel
@@ -1397,7 +1397,7 @@ Example Return:
 {code: 0, msg: request ok, ...}
 ``
 
-#### 1.5.27. <a name='Downloadtheupgradepackageofthecurrentmodellock'></a>Download the upgrade package of the current model lock
+####  1.5.27. <a name='Downloadtheupgradepackageofthecurrentmodellock'></a>Download the upgrade package of the current model lock
 
 * Params:
   * filePath - the file path of the upgrade package
@@ -1412,11 +1412,11 @@ Example Return:
 HttpLib.getInstance(callBack).downloadDFUfile(String filePath, String lockType, String fmversion ,String savePath, String dfuMD5, boolean isRelease)
 ```
 
-## 2. <a name='Issues'></a>Issues
+##  2. <a name='Issues'></a>Issues
 
 Please file any issues, bugs or feature request as an issue on our [GitHub](https://github.com/konewu/SinovoLib) page. Commercial support is available if you need help with integration with your app or services. You can contact us at [ken.wu@zygcom.com](mailto:ken.wu@zygcom.com).
 
-## 3. <a name='Author'></a>Author
+##  3. <a name='Author'></a>Author
 
 This plugin for App is developed by [Sinovotec](http://www.sinovotec.com). You can contact us at <ken.wu@zygcom.com>
 
@@ -1429,9 +1429,9 @@ This plugin for App is developed by [Sinovotec](http://www.sinovotec.com). You c
 
 # iosSinovoLib.framework API Document
 
-## 4. <a name='IOSPlatform'></a>IOS Platform
+##  4. <a name='IOSPlatform'></a>IOS Platform
 
-### 4.1. <a name='Installing-1'></a>Installing
+###  4.1. <a name='Installing-1'></a>Installing
 
 * Add the ``iosSinovoLib.framework`` in TARGET
 * Add the following in your Podfile:
@@ -1457,7 +1457,7 @@ Before using the ``iOSDFULibrary``, you need to create a bridging header file (`
 @import iOSDFULibrary;
 ````
 
-#### 4.1.1. <a name='Addthefollowinginyourinfo.plist'></a>Add the following in your ``info.plist``
+####  4.1.1. <a name='Addthefollowinginyourinfo.plist'></a>Add the following in your ``info.plist``
 
 These permissions are required for iosSinovoLib to work
 
@@ -1498,15 +1498,15 @@ These permissions are required for iosSinovoLib to work
 </plist>
 ```
 
-### 4.2. <a name='SinovoBle-1'></a>SinovoBle
+###  4.2. <a name='SinovoBle-1'></a>SinovoBle
 
-#### 4.2.1. <a name='InitializeBle-1'></a>Initialize Ble
+####  4.2.1. <a name='InitializeBle-1'></a>Initialize Ble
 
 ````
 SinovoBle *sinovoBle = [SinovoBle sharedBLE];
 ````
 
-#### 4.2.2. <a name='InitializeSinovoBledatacallback'></a>Initialize SinovoBle data callback
+####  4.2.2. <a name='InitializeSinovoBledatacallback'></a>Initialize SinovoBle data callback
 
 ````
 - (void) initBle {
@@ -1517,7 +1517,7 @@ SinovoBle *sinovoBle = [SinovoBle sharedBLE];
 [[SinovoBleCallBack sharedBleCallBack] initBle];
 ````
 
-#### 4.2.3. <a name='Blescanby10secondbutnotconnect-1'></a>Ble scan by 10 second，but not connect
+####  4.2.3. <a name='Blescanby10secondbutnotconnect-1'></a>Ble scan by 10 second，but not connect
 
 * data callback: ``onLockFound :(BleLock *)bleDevice``
 
@@ -1525,7 +1525,7 @@ SinovoBle *sinovoBle = [SinovoBle sharedBLE];
 [[SinovoBle sharedBLE] bleScanOnly]
 ```
 
-#### 4.2.4. <a name='Bleconnecttolockviaqrcode-1'></a>Ble connect to lock via qrcode
+####  4.2.4. <a name='Bleconnecttolockviaqrcode-1'></a>Ble connect to lock via qrcode
 
 * Params:
   * qrcode – qrcode of the lock
@@ -1537,7 +1537,7 @@ SinovoBle *sinovoBle = [SinovoBle sharedBLE];
 [[SinovoBle sharedBLE] connectLockViaQRCode :(NSString *)qrcode :(NSString *)userIMEI]
 ```
 
-#### 4.2.5. <a name='Lockopeningandclosingoperation-1'></a>Lock opening and closing operation
+####  4.2.5. <a name='Lockopeningandclosingoperation-1'></a>Lock opening and closing operation
 
 * Params:
   * unlockType – 00 Lock、01 Unlock
@@ -1550,7 +1550,7 @@ SinovoBle *sinovoBle = [SinovoBle sharedBLE];
 [[SinovoBle sharedBLE] toUnlock :(NSString *)dataType :(NSString *)code :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.6. <a name='Automaticconnectionlockinnon-bindingmode-1'></a>Automatic connection lock in non-binding mode
+####  4.2.6. <a name='Automaticconnectionlockinnon-bindingmode-1'></a>Automatic connection lock in non-binding mode
 
 * Params:
   * autoConnectList – Automatically connected lock list
@@ -1574,7 +1574,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] connectLockViaMacSno : bleLockArr];
 ````  
 
-#### 4.2.7. <a name='Updatelockusername-1'></a>Update lock user name
+####  4.2.7. <a name='Updatelockusername-1'></a>Update lock user name
 
 * Params:
   * username - new username
@@ -1586,7 +1586,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] updateUserName :(NSString *)username :(NSString *)userNID :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.8. <a name='Resetcode-1'></a>Reset code
+####  4.2.8. <a name='Resetcode-1'></a>Reset code
 
 * Parmas:
   * codeType - DataType of this code
@@ -1599,7 +1599,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] resetCode :(NSString *)userNID :(NSString *)codeType :(NSString *)codeID :(NSString *)newCode :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.9. <a name='Getinformationofthelock-1'></a>Get information of the lock
+####  4.2.9. <a name='Getinformationofthelock-1'></a>Get information of the lock
 
 * Params:
   * dataType –\
@@ -1622,7 +1622,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] getLockInfo :(int)dataType :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.10. <a name='Setpropertiesofthelock-1'></a>Set properties of the lock
+####  4.2.10. <a name='Setpropertiesofthelock-1'></a>Set properties of the lock
 
 * Params:
   * data – value
@@ -1645,7 +1645,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] setLockInfo :(int)dataType :(NSString *)data :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.11. <a name='Createauserthedefaultisanormaluser-1'></a>Create a user, the default is a normal user
+####  4.2.11. <a name='Createauserthedefaultisanormaluser-1'></a>Create a user, the default is a normal user
 
 * data callback: ``onCreateUser :(NSMutableDictionary *)dict``  
 
@@ -1653,7 +1653,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] addUser :(NSString *)username :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.12. <a name='Addasetofdatafortheuserpasswordcardfingerprint-1'></a>Add a set of data for the user, password, card, fingerprint
+####  4.2.12. <a name='Addasetofdatafortheuserpasswordcardfingerprint-1'></a>Add a set of data for the user, password, card, fingerprint
 
 * Params:
   * userNID – UserNid
@@ -1671,7 +1671,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] addDataForUser :(NSString *)userNID :(NSString *)dataType :(NSString *)data :(NSString *)lockSNO :(NSString *)lockMacAddress]
  ```
 
-#### 4.2.13. <a name='Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding-1'></a>Delete a certain item of data, delete a set of password, card, fingerprint, binding
+####  4.2.13. <a name='Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding-1'></a>Delete a certain item of data, delete a set of password, card, fingerprint, binding
 
 * Params:
   * dataType – type of data
@@ -1683,7 +1683,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] delData :(NSString *)dataType :(NSString *)delID :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.14. <a name='Cleardata-1'></a>Clear data
+####  4.2.14. <a name='Cleardata-1'></a>Clear data
 
 * Params:
   * dataType – Type of data to be cleared :\
@@ -1696,13 +1696,13 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] cleanData :(NSString *)dataType :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.15. <a name='Undertheaddlockoperationunbindthelock-1'></a>Under the add lock operation, unbind the lock
+####  4.2.15. <a name='Undertheaddlockoperationunbindthelock-1'></a>Under the add lock operation, unbind the lock
 
 ```
 [[SinovoBle sharedBLE] cancelConnectLock]
 ```
 
-#### 4.2.16. <a name='Verifypassword-1'></a>Verify password
+####  4.2.16. <a name='Verifypassword-1'></a>Verify password
 
 * Params:
   * code - password
@@ -1713,7 +1713,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] verifyCode :(NSString *)code :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.17. <a name='Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword-1'></a>Modify the attributes of the password, change the normal password and the super user password
+####  4.2.17. <a name='Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword-1'></a>Modify the attributes of the password, change the normal password and the super user password
 
 * Params:
   * oldCodeType - the original type of the password, 02 normal password, 03 super user password
@@ -1726,7 +1726,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] updateCodeType :(NSString *)oldCodeType :(NSString *)codeID :(NSString *)newCodeType :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.18. <a name='Synchronizationlockuserdataincludinguserinformation-1'></a>Synchronization lock user data, including user information
+####  4.2.18. <a name='Synchronizationlockuserdataincludinguserinformation-1'></a>Synchronization lock user data, including user information
 
 * data callback: ``onRequestData :(NSMutableDictionary *)dict``
 
@@ -1734,7 +1734,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] getAllUsers :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.19. <a name='Synclog-1'></a>Sync log
+####  4.2.19. <a name='Synclog-1'></a>Sync log
 
 * Params:
   * logID - the current logID, support the synchronization from the specified id, if the logID is ff, all logs will be synchronized
@@ -1745,7 +1745,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] getLog :(NSString *)logID :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.20. <a name='Enabledisabledynamicpassword-1'></a>Enable/disable dynamic password
+####  4.2.20. <a name='Enabledisabledynamicpassword-1'></a>Enable/disable dynamic password
 
 * Params:
   * code - corresponding dynamic code
@@ -1757,7 +1757,7 @@ bleLock.qrCode = "123456789012";
 [[SinovoBle sharedBLE] doDynamicCode :(NSString *)code :(NSString *)enable :(NSString *)lockSNO :(NSString *)lockMacAddress]
 ```
 
-#### 4.2.21. <a name='GenerateintervaldynamiccodeCalculateperiodiccode-1'></a>Generate interval dynamic code ,Calculate periodic code
+####  4.2.21. <a name='GenerateintervaldynamiccodeCalculateperiodiccode-1'></a>Generate interval dynamic code ,Calculate periodic code
 
 * Params:
   * mac_addr – lock mac address, such as 00A051F4D44A
@@ -1774,7 +1774,7 @@ GetDymanicCode *getDymanicCode =  [[GetDymanicCode alloc] init];
 NSString *result = [getDymanicCode getDymanicCode :(NSString *)mac_addr :(NSString*)baseTime :(NSString *)startTime :(NSString *)codeType :(NSString *)validTime];
 ```
 
-#### 4.2.22. <a name='Calculateone-timecodeorTimedcode-1'></a>Calculate one-time code or Timed code
+####  4.2.22. <a name='Calculateone-timecodeorTimedcode-1'></a>Calculate one-time code or Timed code
 
 * Params:
   * mac_addr – lock mac address, such as 00A051F4D44A
@@ -1791,23 +1791,23 @@ GetDymanicCode *getDymanicCode =  [[GetDymanicCode alloc] init];
 NSString *result = [getDymanicCode getDymanicCode :(NSString *)mac_addr :(NSString*)baseTime :(NSString *)startTime :(NSString *)codeType :(NSString *)validTime];
 ```
 
-#### 4.2.23. <a name='StopScanBLE-1'></a>Stop Scan BLE
+####  4.2.23. <a name='StopScanBLE-1'></a>Stop Scan BLE
 
 ```
 [[SinovoBle sharedBLE] cancelConnectLock]
 ```
 
-#### 4.2.24. <a name='DisconnecttheBLEconnectionandclearthecache-1'></a>Disconnect the BLE connection and clear the cache
+####  4.2.24. <a name='DisconnecttheBLEconnectionandclearthecache-1'></a>Disconnect the BLE connection and clear the cache
 
 ```
 [[SinovoBle sharedBLE] toDisconnBle]
 ```
 
-### 4.3. <a name='GWSmartConfig-1'></a>GWSmartConfig
+###  4.3. <a name='GWSmartConfig-1'></a>GWSmartConfig
 
 To use ``startSmartconfig()`` and ``configureGW()`` on iOS >= 12, the ``Access WiFi information capability`` in XCode must be enabled. Otherwise, both methods will return null.
 
-#### 4.3.1. <a name='Gatewayconfiguration-1'></a>Gateway configuration
+####  4.3.1. <a name='Gatewayconfiguration-1'></a>Gateway configuration
 
 * Params:
   * wifiSSID - Wifi SSID(Wifi Name)
@@ -1858,13 +1858,13 @@ such as :
 }
 ````
 
-#### 4.3.2. <a name='CancelGatewayconfiguration-1'></a>Cancel Gateway configuration  
+####  4.3.2. <a name='CancelGatewayconfiguration-1'></a>Cancel Gateway configuration  
 
 ```
 [[ESPTouchTask alloc] interrupt]
 ```
 
-#### 4.3.3. <a name='ItcanalsobeconfiguredviaBluetooth'></a>It can also be configured via Bluetooth
+####  4.3.3. <a name='ItcanalsobeconfiguredviaBluetooth'></a>It can also be configured via Bluetooth
 
 * Params:
   * wifiSSID - Wifi SSID(Wifi Name)
@@ -1876,13 +1876,13 @@ such as :
  [[SinovoBle sharedBLE] configureGW :(NSString *)wifiSSID :(NSString *)wifiPass]
  ````
 
-#### 4.3.4. <a name='CancelGatewayconfiguration-1'></a>Cancel Gateway configuration  
+####  4.3.4. <a name='CancelGatewayconfiguration-1'></a>Cancel Gateway configuration  
 
 ```
 [[SinovoBle sharedBLE] finishConfigureGW]
 ```
 
-#### 4.3.5. <a name='SinovoBleotherscallback'></a>SinovoBle others callback
+####  4.3.5. <a name='SinovoBleotherscallback'></a>SinovoBle others callback
 
 * ``onBleStatusUnknown`` - Bluetooth status unknown
 * ``onBluetoothOn`` - Bluetooth enabled
@@ -1893,9 +1893,9 @@ such as :
 * ``onScanNothing20s`` - The specified lock cannot be searched within 20 seconds
 * ``onBleDisconnect :(CBPeripheral *)peripheral`` - Connection disconnected
   
-### 4.4. <a name='MqttInstance'></a>MqttInstance
+###  4.4. <a name='MqttInstance'></a>MqttInstance
 
-#### 4.4.1. <a name='Initialize-1'></a>Initialize
+####  4.4.1. <a name='Initialize-1'></a>Initialize
 
 * Params:
   * productKey – produceKey
@@ -1909,7 +1909,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [mqttInstance MqttInit :(NSString *)productKey :(NSString *)deviceName :(NSString *)deviceSecret :(NSString *)region]
 ````
 
-#### 4.4.2. <a name='InitializeMqttCallBack'></a>Initialize MqttCallBack
+####  4.4.2. <a name='InitializeMqttCallBack'></a>Initialize MqttCallBack
 
 ```
 -(void) InitMqttCallback{
@@ -1919,19 +1919,19 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttCallBack sharedMqttCallBack] InitMqttCallback];
 ```
 
-#### 4.4.3. <a name='Unsubscribetopic'></a>Unsubscribe topic
+####  4.4.3. <a name='Unsubscribetopic'></a>Unsubscribe topic
 
 ````
 [[MqttCallBack sharedMqttCallBack] unSubscriptTopic]
 ````
 
-#### 4.4.4. <a name='Logoutmqtt-1'></a>Logout mqtt
+####  4.4.4. <a name='Logoutmqtt-1'></a>Logout mqtt
 
 ```
 [[MqttInstance sharedMqtt] logoutMQTT]
 ```
 
-#### 4.4.5. <a name='Createauserthedefaultisanormaluser-1'></a>Create a user, the default is a normal user
+####  4.4.5. <a name='Createauserthedefaultisanormaluser-1'></a>Create a user, the default is a normal user
 
 * Params:
   * gatewayid - gateway id , eg: 3C61052AD7FC
@@ -1943,7 +1943,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] addUser :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(NSString *)userName]
 ```
 
-#### 4.4.6. <a name='Resetcode-1'></a>Reset code
+####  4.4.6. <a name='Resetcode-1'></a>Reset code
 
 * Params:
   * gatewayid - gateway id
@@ -1958,7 +1958,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] resetCode :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(NSString *)userNid :(NSString *)codeType :(NSString *)codeID :(NSString *)newCode]
 ```
 
-#### 4.4.7. <a name='Updatelockusername-1'></a>Update lock user name
+####  4.4.7. <a name='Updatelockusername-1'></a>Update lock user name
 
 * Params:
   * gatewayid - gateway id
@@ -1971,7 +1971,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] updateUserName :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(NSString *)userName :(NSString *)userNid]
 ```
 
-#### 4.4.8. <a name='Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword-1'></a>Modify the attributes of the password, change the normal password and the super user password
+####  4.4.8. <a name='Modifytheattributesofthepasswordchangethenormalpasswordandthesuperuserpassword-1'></a>Modify the attributes of the password, change the normal password and the super user password
 
 * Params:
   * gatewayid - gateway id
@@ -1985,7 +1985,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] updateCodeType :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(NSString *)oldCodeType :(NSString *)codeID :(NSString *)newCodeType]
 ```
 
-#### 4.4.9. <a name='Addasetofdatafortheuserpasswordcardfingerprint-1'></a>Add a set of data for the user, password, card, fingerprint
+####  4.4.9. <a name='Addasetofdatafortheuserpasswordcardfingerprint-1'></a>Add a set of data for the user, password, card, fingerprint
 
 * Params:
   * gatewayid - gateway id
@@ -2004,7 +2004,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] addDataForUser :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(NSString *)userNid :(NSString *)dataType :(NSString *)password]
  ```
 
-#### 4.4.10. <a name='Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding-1'></a>Delete a certain item of data, delete a set of password, card, fingerprint, binding
+####  4.4.10. <a name='Deleteacertainitemofdatadeleteasetofpasswordcardfingerprintbinding-1'></a>Delete a certain item of data, delete a set of password, card, fingerprint, binding
 
 * Params:
   * gatewayid - gateway id
@@ -2017,7 +2017,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] delData :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(NSString *)dataType :(NSString *)delID]
 ```
 
-#### 4.4.11. <a name='Verifypassword-1'></a>Verify password
+####  4.4.11. <a name='Verifypassword-1'></a>Verify password
 
 * Params:
   * gatewayid - gateway id
@@ -2029,7 +2029,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] verifyCode :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(NSString *)password]
 ```
 
-#### 4.4.12. <a name='Setpropertiesofthelock-1'></a>Set properties of the lock
+####  4.4.12. <a name='Setpropertiesofthelock-1'></a>Set properties of the lock
 
 * Params:
   * gatewayid - gateway id
@@ -2053,7 +2053,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] setLockInfo :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(int)datatype :(NSString *)data]
 ```
 
-#### 4.4.13. <a name='Getinformationofthelock-1'></a>Get information of the lock
+####  4.4.13. <a name='Getinformationofthelock-1'></a>Get information of the lock
 
 * Params:
   * gatewayid - gateway id
@@ -2077,7 +2077,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] getLockInfo :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(int)datatype]
 ```
 
-#### 4.4.14. <a name='Lockopeningandclosingoperation-1'></a>Lock opening and closing operation
+####  4.4.14. <a name='Lockopeningandclosingoperation-1'></a>Lock opening and closing operation
 
 * Params:
   * gatewayid - gateway id
@@ -2090,7 +2090,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] toUnlock :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(NSString *)unlockType :(NSString *)code]
 ```
 
-#### 4.4.15. <a name='Cleardata-1'></a>Clear data
+####  4.4.15. <a name='Cleardata-1'></a>Clear data
 
 * Params:
   * gatewayid - gateway id
@@ -2104,7 +2104,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] cleanData :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(NSString *)dataType]
 ```
 
-#### 4.4.16. <a name='Enabledisabledynamicpassword-1'></a>Enable/disable dynamic password
+####  4.4.16. <a name='Enabledisabledynamicpassword-1'></a>Enable/disable dynamic password
 
 * Params:
   * gatewayid - gateway id
@@ -2117,7 +2117,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] doDynamicCode :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(NSString *)dynamicCode :(NSString *)enable]
 ```
 
-#### 4.4.17. <a name='Synchronizationlockuserdataincludinguserinformation-1'></a>Synchronization lock user data, including user information
+####  4.4.17. <a name='Synchronizationlockuserdataincludinguserinformation-1'></a>Synchronization lock user data, including user information
 
 * Params:
   * gatewayid - gateway id
@@ -2128,7 +2128,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] getAllUsers :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno]
 ```
 
-#### 4.4.18. <a name='Synclog-1'></a>Sync log
+####  4.4.18. <a name='Synclog-1'></a>Sync log
 
 * Params:
   * gatewayid - gateway id
@@ -2140,7 +2140,7 @@ MqttInstance *mqttInstance = [MqttInstance sharedMqtt];
 [[MqttInstance sharedMqtt] getLog :(NSString *)gatewayid :(NSString *)mac :(NSString *)sno :(NSString *)logID]
 ```
 
-#### 4.4.19. <a name='PushdatatoMQTTserverorotheruser'></a>Push data to MQTT server or other user
+####  4.4.19. <a name='PushdatatoMQTTserverorotheruser'></a>Push data to MQTT server or other user
 
 * Params:
   * dict - your data
@@ -2157,7 +2157,7 @@ NSMutableDictionary *dict = {@"type": @"updateDevice", @"device_id": @"FE655103C
 [[MqttInstance sharedMqtt] pushDataToOthers :dict];
 ```
 
-#### 4.4.20. <a name='DisconnecttheBluetoothconnectionbetweenthegatewayandthelock'></a>Disconnect the Bluetooth connection between the gateway and the lock
+####  4.4.20. <a name='DisconnecttheBluetoothconnectionbetweenthegatewayandthelock'></a>Disconnect the Bluetooth connection between the gateway and the lock
 
 * Params:
   * gatewayid : the gateway's id , eg: 3C61052AD7FC
@@ -2167,13 +2167,13 @@ NSMutableDictionary *dict = {@"type": @"updateDevice", @"device_id": @"FE655103C
 [[MqttInstance sharedMqtt] disconnectLock :(NSString *)gatewayid :(NSMutableArray *)macList]
 ```
 
-#### 4.4.21. <a name='Stopmqttfromsendingcommands-1'></a>Stop mqtt from sending commands
+####  4.4.21. <a name='Stopmqttfromsendingcommands-1'></a>Stop mqtt from sending commands
 
 ```
 [[MqttInstance sharedMqtt] stopMqttSendCmd]
 ```
 
-#### 4.4.22. <a name='MqttInstancecallback'></a>MqttInstance callback
+####  4.4.22. <a name='MqttInstancecallback'></a>MqttInstance callback
 
 * ``onMqttInitSuccess`` - Mqtt init success
 * ``onMqttInitFailed`` - Mqtt init failed
@@ -2188,9 +2188,9 @@ NSMutableDictionary *dict = {@"type": @"updateDevice", @"device_id": @"FE655103C
 * ``onConnectionLost`` - Mqtt disconnect
 * ``onMsgArrived :(NSString *)topic :(id) msg`` - Received data
 
-### 4.5. <a name='HttpLib-1'></a>HttpLib
+###  4.5. <a name='HttpLib-1'></a>HttpLib
 
-#### 4.5.1. <a name='Registernewuser-1'></a>Register new user
+####  4.5.1. <a name='Registernewuser-1'></a>Register new user
 
 * Params:
   * account – User's account
@@ -2202,7 +2202,7 @@ NSMutableDictionary *dict = {@"type": @"updateDevice", @"device_id": @"FE655103C
 [[HttpLib sharedHttpLib] userRegister :(NSString *)account :(NSString *)password]
 ```
 
-#### 4.5.2. <a name='login-1'></a>login
+####  4.5.2. <a name='login-1'></a>login
 
 * Params:
   * account – User's account
@@ -2214,7 +2214,7 @@ NSMutableDictionary *dict = {@"type": @"updateDevice", @"device_id": @"FE655103C
 [[HttpLib sharedHttpLib] userLogin :(NSString *)account :(NSString *)password]
 ```
 
-#### 4.5.3. <a name='Gettheverificationcodebeforechangingthepassword-1'></a>Get the verification code before changing the password
+####  4.5.3. <a name='Gettheverificationcodebeforechangingthepassword-1'></a>Get the verification code before changing the password
 
 * Params:
   * account – User's account
@@ -2225,7 +2225,7 @@ NSMutableDictionary *dict = {@"type": @"updateDevice", @"device_id": @"FE655103C
 [[HttpLib sharedHttpLib] getVerfyCode :(NSString *)account]
 ```
 
-#### 4.5.4. <a name='changepassword-1'></a>change password
+####  4.5.4. <a name='changepassword-1'></a>change password
 
 * Params:
   * account – User's account
@@ -2238,7 +2238,7 @@ NSMutableDictionary *dict = {@"type": @"updateDevice", @"device_id": @"FE655103C
 [[HttpLib sharedHttpLib] modifyPass :(NSString *)account :(NSString *)verifycode :(NSString *)newPass]
 ```
 
-#### 4.5.5. <a name='addgateway-1'></a>add gateway
+####  4.5.5. <a name='addgateway-1'></a>add gateway
 
 * Params:
   * gatewayID – the gateway's ID
@@ -2250,7 +2250,7 @@ NSMutableDictionary *dict = {@"type": @"updateDevice", @"device_id": @"FE655103C
 [[HttpLib sharedHttpLib] addGateway :(NSString *)gatewayID :(NSString *)gatewayName]
 ```
 
-#### 4.5.6. <a name='deletegateway-1'></a>delete gateway
+####  4.5.6. <a name='deletegateway-1'></a>delete gateway
 
 * Params:
   * gatewayID – the gateway's ID
@@ -2261,7 +2261,7 @@ NSMutableDictionary *dict = {@"type": @"updateDevice", @"device_id": @"FE655103C
 [[HttpLib sharedHttpLib] delGateway :(NSString *)gatewayID]
 ```
 
-#### 4.5.7. <a name='changegatewaysname-1'></a>change gateway's name
+####  4.5.7. <a name='changegatewaysname-1'></a>change gateway's name
 
 * Params:
   * gatewayID – the gateway's ID
@@ -2273,7 +2273,7 @@ NSMutableDictionary *dict = {@"type": @"updateDevice", @"device_id": @"FE655103C
 [[HttpLib sharedHttpLib] modifyGWName :(NSString *)gatewayID :(NSString *)gatewayName]
 ```
 
-#### 4.5.8. <a name='getthegatewayslist-1'></a>get the gateway's list
+####  4.5.8. <a name='getthegatewayslist-1'></a>get the gateway's list
 
 * data callback: ``onGetGwList  :(NSDictionary *)pNSDictionary``
 
@@ -2281,7 +2281,7 @@ NSMutableDictionary *dict = {@"type": @"updateDevice", @"device_id": @"FE655103C
 [[HttpLib sharedHttpLib] getGatewayList]
 ```
 
-#### 4.5.9. <a name='Addlocktohttpserver-1'></a>Add lock to http server
+####  4.5.9. <a name='Addlocktohttpserver-1'></a>Add lock to http server
 
 * data callback: ``onAddLock :(NSDictionary *)pNSDictionary``
 
@@ -2312,7 +2312,7 @@ for example:
 [[HttpLib sharedHttpLib] addLock :(NSMutableDictionary *)jsonData]
 ```
 
-#### 4.5.10. <a name='updateinformationofthelock-1'></a>update information of the lock
+####  4.5.10. <a name='updateinformationofthelock-1'></a>update information of the lock
 
 * data callback: ``onUpdateLock :(NSDictionary *)pNSDictionary``
 
@@ -2343,7 +2343,7 @@ for example:
 [[HttpLib sharedHttpLib] updateLock :(NSMutableDictionary *)jsonData]
 ```
 
-#### 4.5.11. <a name='Getthelistoflockfortheuser-1'></a>Get the list of lock for the user
+####  4.5.11. <a name='Getthelistoflockfortheuser-1'></a>Get the list of lock for the user
 
 * data callback: ``onGetLockList:(NSDictionary *)pNSDictionary``
 
@@ -2351,7 +2351,7 @@ for example:
 [[HttpLib sharedHttpLib] getLockList]
 ```
 
-#### 4.5.12. <a name='deletelockfromhttpserver-1'></a>delete lock from http server
+####  4.5.12. <a name='deletelockfromhttpserver-1'></a>delete lock from http server
 
 * Params:
   * lockId - lockMac
@@ -2362,7 +2362,7 @@ for example:
 [[HttpLib sharedHttpLib] delLock :(NSString *)lockId]
 ```
 
-#### 4.5.13. <a name='Updatetheinformationoftheloginuser-1'></a>Update the information of the login user
+####  4.5.13. <a name='Updatetheinformationoftheloginuser-1'></a>Update the information of the login user
 
 * Params:
   * shake_unlock - 01 enable shake unlock , 00 disable shake unlock
@@ -2374,7 +2374,7 @@ for example:
 [[HttpLib sharedHttpLib] updateLoginUserInfo :(NSString *)nickname :(NSString *)age :(NSString *)address :(NSString *)shake_unlock :(NSString *)vibration]
 ```
 
-#### 4.5.14. <a name='Updateavatarfortheloginuser-1'></a>Update avatar for the login user
+####  4.5.14. <a name='Updateavatarfortheloginuser-1'></a>Update avatar for the login user
 
 * Params:
   * imgBase64 – avatar data
@@ -2385,7 +2385,7 @@ for example:
 [[HttpLib sharedHttpLib] updateUserAvatar :(NSString *)imgBase64]
 ```
 
-#### 4.5.15. <a name='Sharethelocktootherusers-1'></a>Share the lock to other users
+####  4.5.15. <a name='Sharethelocktootherusers-1'></a>Share the lock to other users
 
 * data callback: ``onShareLock :(NSDictionary *)pNSDictionary``
 
@@ -2405,7 +2405,7 @@ for example:
 [[HttpLib sharedHttpLib] shareLock :(NSMutableDictionary *)jsondata]
 ````
 
-#### 4.5.16. <a name='Addsharedatatohttpserver-1'></a>Add share data to http server
+####  4.5.16. <a name='Addsharedatatohttpserver-1'></a>Add share data to http server
 
 * data callback: ``onAddShareData :(NSDictionary *)pNSDictionary``
 
@@ -2428,7 +2428,7 @@ for example:
 [[HttpLib sharedHttpLib] addShareData :(NSMutableDictionary *)jsondata]
 ```
 
-#### 4.5.17. <a name='UpdateshareDataonhttpserver-1'></a>Update shareData on http server
+####  4.5.17. <a name='UpdateshareDataonhttpserver-1'></a>Update shareData on http server
 
 * data callback: ``onUpdateShareData :(NSDictionary *)pNSDictionary``
 
@@ -2444,7 +2444,7 @@ status - 00 disable password , 01 enable password
 [[HttpLib sharedHttpLib] updateShareData :(NSMutableDictionary *)jsondata]
 ```
 
-#### 4.5.18. <a name='GetlistofsharedDatafromhttpserver-1'></a>Get list of sharedData from http server
+####  4.5.18. <a name='GetlistofsharedDatafromhttpserver-1'></a>Get list of sharedData from http server
 
 * data callback: ``onGetShareData :(NSDictionary *)pNSDictionary``
 
@@ -2452,7 +2452,7 @@ status - 00 disable password , 01 enable password
 [[HttpLib sharedHttpLib] getShareDataList :(NSMutableDictionary *)jsondata]
 ```
 
-#### 4.5.19. <a name='DeleteshareDatafromhttpserver-1'></a>Delete shareData from http server
+####  4.5.19. <a name='DeleteshareDatafromhttpserver-1'></a>Delete shareData from http server
 
 * data callback: ``onDelShareData :(NSDictionary *)pNSDictionary``
 
@@ -2468,7 +2468,7 @@ for example:
 [[HttpLib sharedHttpLib] delShareData :(NSString *)jsondata]
 ```
 
-#### 4.5.20. <a name='Deletethesub-deviceinthegateway-1'></a>Delete the sub-device in the gateway
+####  4.5.20. <a name='Deletethesub-deviceinthegateway-1'></a>Delete the sub-device in the gateway
 
 * Params:
   * lockID – lock mac address
@@ -2479,7 +2479,7 @@ for example:
 [[HttpLib sharedHttpLib] delGWsubLock :(NSString *)lockID]
 ```
 
-#### 4.5.21. <a name='Resetlock-1'></a>Reset lock
+####  4.5.21. <a name='Resetlock-1'></a>Reset lock
 
 * Params:
   * lockID – lock mac address
@@ -2490,7 +2490,7 @@ for example:
 [[HttpLib sharedHttpLib] resetLock :(NSString *)lockID]
 ```
 
-#### 4.5.22. <a name='Getuseravatar-1'></a>Get user avatar
+####  4.5.22. <a name='Getuseravatar-1'></a>Get user avatar
 
 * Params:
   * url – url of the user avatar
@@ -2501,7 +2501,7 @@ for example:
 [[HttpLib sharedHttpLib] getUserAvatar :(NSString *)url]
 ```
 
-#### 4.5.23. <a name='Getlockimage-1'></a>Get lock image
+####  4.5.23. <a name='Getlockimage-1'></a>Get lock image
 
 * Params:
   * url – url of the lock image
@@ -2513,7 +2513,7 @@ for example:
 [[HttpLib sharedHttpLib] getLockImage :(NSString *)url :(NSString *)lockType]
 ```
 
-#### 4.5.24. <a name='Getlocktypeinformation-1'></a>Get lock type information
+####  4.5.24. <a name='Getlocktypeinformation-1'></a>Get lock type information
 
 * data callback: ``onGetLockType :(id)object``
 
@@ -2521,7 +2521,7 @@ for example:
 [[HttpLib sharedHttpLib] getLockType]
 ```
 
-#### 4.5.25. <a name='Getupgradepackageinformation-1'></a>Get upgrade package information
+####  4.5.25. <a name='Getupgradepackageinformation-1'></a>Get upgrade package information
 
 * Params:
   * isRelease - YES will get  from release channel , NO will get  from debug channel
@@ -2532,7 +2532,7 @@ for example:
 [[HttpLib sharedHttpLib]  getDFUInfo :(BOOL)isRelease]
 ```
 
-#### 4.5.26. <a name='Downloadtheupgradepackageofthecurrentmodellock-1'></a>Download the upgrade package of the current model lock
+####  4.5.26. <a name='Downloadtheupgradepackageofthecurrentmodellock-1'></a>Download the upgrade package of the current model lock
 
 * Params:
   * url - the url of the upgrade package
@@ -2545,7 +2545,7 @@ for example:
 [[HttpLib sharedHttpLib] downloadDfuFile :(BOOL)isRelease :(NSString *)url]
 ```
 
-### 4.6. <a name='DFUupgradelockfirmwareupgrade-1'></a>DFU upgrade, lock firmware upgrade
+###  4.6. <a name='DFUupgradelockfirmwareupgrade-1'></a>DFU upgrade, lock firmware upgrade
 
 for example:
 
@@ -2666,7 +2666,7 @@ myDelegate.isDFUMode = YES; // enter dfu upgrade mode
 }
 ```
 
-#### 4.6.1. <a name='CancelDFUupgrade-1'></a>Cancel DFU upgrade
+####  4.6.1. <a name='CancelDFUupgrade-1'></a>Cancel DFU upgrade
 
 ```
 // for example:
@@ -2674,10 +2674,10 @@ myDelegate.isDFUMode = YES; // enter dfu upgrade mode
 myDelegate.DFUcontroller.abort;
 ```
 
-## 5. <a name='Issues-1'></a>Issues
+##  5. <a name='Issues-1'></a>Issues
 
 Please file any issues, bugs or feature request as an issue on our [GitHub](https://github.com/konewu/iosSinovoLibrary) page. Commercial support is available if you need help with integration with your app or services. You can contact us at [ken.wu@zygcom.com](mailto:ken.wu@zygcom.com).
 
-## 6. <a name='Author-1'></a>Author
+##  6. <a name='Author-1'></a>Author
 
 This plugin for App is developed by [Sinovotec](http://www.sinovotec.com). You can contact us at <ken.wu@zygcom.com>

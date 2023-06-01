@@ -1,9 +1,9 @@
 - [iBooking API Document](#ibooking-api-document)
   - [HTTP](#http)
       - [Header](#header)
-      - [Hotel registration](#hotel-registration)
+      - [Hotel Manager Registration](#hotel-manager-registration)
         - [POST：`` http://fota.qiksmart.com/hotel_lock/addManager.php``](#post-httpfotaqiksmartcomhotel_lockaddmanagerphp)
-      - [Hotel Login](#hotel-login)
+      - [Hotel Manager Login](#hotel-manager-login)
         - [POST：`` http://fota.qiksmart.com/hotel_lock/checkpass.php``](#post-httpfotaqiksmartcomhotel_lockcheckpassphp)
       - [Guest registration](#guest-registration)
         - [POST：``http://fota.qiksmart.com/hotel_lock/adduser.php``](#posthttpfotaqiksmartcomhotel_lockadduserphp)
@@ -83,7 +83,7 @@ header("Content-type:application/x-www-form-urlencoded;charset=utf-8");
 ```
 
 
-#### Hotel registration
+#### Hotel Manager Registration
 * Params:
   * username – String
   * password – String
@@ -92,7 +92,7 @@ header("Content-type:application/x-www-form-urlencoded;charset=utf-8");
 ##### POST：`` http://fota.qiksmart.com/hotel_lock/addManager.php``
   
 
-####  Hotel Login 
+####  Hotel Manager Login 
 * Params:
   * username – String
   * password – String

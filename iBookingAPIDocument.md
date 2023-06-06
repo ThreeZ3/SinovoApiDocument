@@ -300,10 +300,21 @@ header("Content-type:application/x-www-form-urlencoded;charset=utf-8");
 ##  SinovoLib API Document - Android Platform
 
 ### Installing
+Add it in your ``build.grade(:android)`` file:
+ ``` 
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+``` 
+
+
 Add sinovoLib to your ``build.grade(:app)`` file:
  ``` 
  dependencies{
-    implementation 'com.github.konewu:sinovoLib:latest version'
+      implementation 'com.github.ThreeZ3:sinovobleliba:latest version'
 }
 ```
 Sync Project with Gradle

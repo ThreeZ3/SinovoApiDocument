@@ -181,6 +181,17 @@
 ##  1. <a name='AndroidPlatform'></a>Android Platform
 
 ###  1.1. <a name='Installing'></a>Installing
+Add it in your ``build.grade(:android)`` file:
+ ``` 
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+
 
 Add sinovoLib to your ``build.grade(:app)`` file:
 

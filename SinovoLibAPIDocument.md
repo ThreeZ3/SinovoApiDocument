@@ -1441,7 +1441,12 @@ This plugin for App is developed by [Sinovotec](http://www.sinovotec.com). You c
 
 ###  4.1. <a name='Installing-1'></a>Installing
 
-* Add the ``iosSinovoLib.framework`` in TARGET
+* Add the ``iosSinovoLib.framework`` in ``TARGET`` , You can get ``iosSinovoLib.framework`` at this link: 
+``
+https://github.com/ThreeZ3/iosSinovoLib
+``
+
+
 * Add the following in your Podfile:
 
 ```

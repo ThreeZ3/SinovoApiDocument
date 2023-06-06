@@ -460,7 +460,12 @@ SinovoBle.getInstance().disconnBle()
 # iosSinovoLib.framework API Document
 ## IOS Platform
 ### Installing
-* Add the ``iosSinovoLib.framework`` in TARGET
+* Add the ``iosSinovoLib.framework`` in ``TARGET`` , You can get ``iosSinovoLib.framework`` at this link: 
+``
+https://github.com/ThreeZ3/iosSinovoLib
+``
+
+
 * Add the following in your Podfile:
 ```
 target 'Runner' do
